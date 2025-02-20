@@ -1,0 +1,21 @@
+dynamic measure swap:
+
+CASE [Measure Parameter]  
+    WHEN "Sales" THEN SUM([Sales])  
+    WHEN "Profit" THEN SUM([Profit])  
+    WHEN "Quantity" THEN SUM([Quantity])  
+END
+
+dynamic dimension swap:
+
+CASE [Select Dimension]  
+    WHEN "Region" THEN [Region]  
+    WHEN "Category" THEN [Category]  
+    WHEN "Sub-Category" THEN [Sub-Category]  
+END
+
+Dynamic Title:
+
+"Sales by " + [Select Dimension]
+
+
